@@ -7,11 +7,19 @@
 <body>
     
     <?php
-    require './Funcionario.php';
-    require './Bonus.php';
+
+    /*Link para documentação
+        https://www.php-fig.org/psr/
+        https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc.md
+        https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc-tags.md*/    
+        
+        require './Funcionario.php';
+        require './Bonus.php';
 
     $funcionario = new Funcionario();
-    $funcionario->nome = "Cesar";
+
+    //Atributo privado não pode ser acessado fora da classe
+    $funcionario->nome = "Lucas";
     $funcionario->salario = 7961.52;
     echo $funcionario->verSalario();
     //Atributo privado não pode ser acessado fora da classe
